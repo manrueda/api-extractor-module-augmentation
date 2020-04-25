@@ -1,8 +1,11 @@
 import { foo, Extras } from './core';
 import './plugin'
+import { bar } from './external-plugin'
 
 foo({ coreProp: true });
 
 foo({ pluginProp: true });
 
-export { foo, Extras }
+bar({ pluginProp: true, enabled: true });
+
+export { foo, Extras, bar }
